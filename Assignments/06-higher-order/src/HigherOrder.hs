@@ -79,7 +79,7 @@ search = error "TODO: define search"
 -- the tree. That's not important for now. But do make sure you
 -- maintain the BST property itself.)
 
-insert :: Ord => a -> BST a -> BST a
+insert :: Ord a => a -> BST a -> BST a
 insert = error "TODO: define insert"
 
 -- Task HigherOrder-7.
