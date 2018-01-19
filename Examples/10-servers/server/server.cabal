@@ -1,0 +1,44 @@
+﻿name:                server
+version:             0.1.0.0
+author:              Lars Bruenjes
+maintainer:          lars.bruenjes@iohk.io
+copyright:           (c) 2017 Lars Bruenjes
+category:            Training
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable shouting
+  hs-source-dirs:      src
+  main-is:             ShoutingServer.hs
+  build-depends:       base >= 4.7 && < 5
+                     , network
+  ghc-options:         -Wall -threaded -rtsopts
+  default-language:    Haskell2010
+
+executable server1
+  hs-source-dirs:      src
+  main-is:             Server1.hs
+  build-depends:       base >= 4.7 && < 5
+                     , network
+                     , stm
+  ghc-options:         -Wall -threaded -rtsopts
+  default-language:    Haskell2010
+
+executable server2
+  hs-source-dirs:      src
+  main-is:             Server2.hs
+  build-depends:       base >= 4.7 && < 5
+                     , network
+                     , stm
+  ghc-options:         -Wall -threaded -rtsopts
+  default-language:    Haskell2010
+
+executable server3
+  hs-source-dirs:      src
+  main-is:             Server3.hs
+  build-depends:       base >= 4.7 && < 5
+                     , async
+                     , network
+                     , stm
+  ghc-options:         -Wall -threaded -rtsopts
+  default-language:    Haskell2010
