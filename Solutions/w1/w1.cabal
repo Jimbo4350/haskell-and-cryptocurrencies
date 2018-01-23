@@ -1,0 +1,55 @@
+name:                w1
+version:             0.1.0.0
+author:              Lars Bruenjes
+maintainer:          lars.bruenjes@iohk.io
+copyright:           (c) 2017 Lars Bruenjes
+category:            Training
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Hashing 
+                     , MergeSort
+                     , Permutations
+                     , TailRecursion
+                     , Teletype
+                     , Tries
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , containers
+                     , cryptonite
+                     , directory
+                     , mtl
+                     , QuickCheck
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+executable sha256sum
+  hs-source-dirs:      sha256sum
+  main-is:             Main.hs
+  build-depends:       base >= 4.7 && < 5
+                     , w1
+  ghc-options:         -Wall
+  default-language:    Haskell2010
+
+test-suite tries-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base >= 4.7 && < 5
+                     , hspec
+                     , QuickCheck
+                     , w1
+  ghc-options:         -Wall
+  default-language:    Haskell2010
+
+test-suite tries-doctest
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      doctest
+  main-is:             doctest.hs
+  build-depends:       base >= 4.7 && < 5
+                     , doctest
+  ghc-options:         -Wall
+  default-language:    Haskell2010
