@@ -1,0 +1,7 @@
+<europe type="continent">
+    <greece type="country" language="Greek" />
+    <italy type="country" language = "Italian">
+        <rome type="city"/>
+        <napoli type="city" />
+    </italy>
+</europe>
