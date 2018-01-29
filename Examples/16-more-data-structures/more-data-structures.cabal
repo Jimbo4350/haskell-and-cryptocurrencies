@@ -1,0 +1,26 @@
+name:                more-data-structures
+version:             0.1.0.0
+author:              Lars Bruenjes
+maintainer:          lars.bruenjes@iohk.io
+copyright:           (c) 2017 Lars Bruenjes
+category:            Training
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Binary
+                     , Merkle.Core
+                     , Merkle.Hash
+                     , Merkle.Path
+                     , Merkle
+  build-depends:       base >= 4.7 && < 5
+                     , binary
+                     , bytestring
+                     , cryptonite
+                     , memory
+                     , semigroups
+  default-language:    Haskell2010
+  default-extensions:  RecordWildCards
+  ghc-options:         -Wall
