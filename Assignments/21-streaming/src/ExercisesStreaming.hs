@@ -3,7 +3,8 @@ module ExercisesStreaming where
 
 import           Control.Concurrent  hiding (yield)
 import           Control.Monad.State
-import           Prelude             (Either (..), Int, String, ($), (.), (<$>))
+import           Prelude             (Either (..), IO, Int, String, ($), (.),
+                                      (<$>))
 import qualified Prelude             as P
 import           Streaming
 import           Streaming.Internal
