@@ -109,7 +109,7 @@ import           Streaming.Internal
 
 -- S9. What does
 --
--- stdoutLn (zipWith const (each [1..10]) (delay 1000000))
+-- stdoutLn (zipWith (\i _ -> P.show i) (each [1..10]) (delay 1000000))
 --
 -- do? Does this also work for an infinite list?
 
