@@ -73,7 +73,7 @@ import           Streaming.Internal
 
 -- S3. Implement
 --
--- each :: [a] -> Stream (Of a) m ()
+-- each :: Monad m => [a] -> Stream (Of a) m ()
 
 -- S4. Implement
 --
