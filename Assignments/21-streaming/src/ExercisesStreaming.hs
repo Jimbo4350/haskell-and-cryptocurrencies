@@ -102,7 +102,7 @@ import           Streaming.Internal
 
 -- S8. Implement
 --
--- zipWith :: (a -> b -> c) -> Stream (Of a) m r -> Stream (Of b) m r -> Stream (Of c) m r
+-- zipWith :: Monad m => (a -> b -> c) -> Stream (Of a) m r -> Stream (Of b) m r -> Stream (Of c) m r
 --
 -- such that the resulting stream produces one result whenever the
 -- two incoming streams produce a result.
