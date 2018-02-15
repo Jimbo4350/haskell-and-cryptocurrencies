@@ -119,7 +119,7 @@ import           Streaming.Internal
 --
 -- stdinLn :: MonadIO m => Stream (Of String) m ()
 --
--- that consumes stdin line by line.
+-- that consumes stdin line by line. This should handle EOF gracefully.
 
 -- S12. Define
 --
@@ -155,7 +155,9 @@ import           Streaming.Internal
 -- sumAll :: IO ()
 --
 -- that reads stdin line by line and computes the sum of
--- all the lines that parse as a number.
+-- all the lines that parse as a Double.
+-- (In order to test this in GHCI, you'll have to use
+-- hSetBuffering stdin LineBuffering.)
 
 -- S17. Define
 --
