@@ -1,11 +1,12 @@
 {-# OPTIONS_GHC -Wno-unused-imports #-}
 module ExercisesStreaming where
 
-import Control.Concurrent
-import Control.Monad.State
-import Streaming
-import Streaming.Internal
-import qualified Prelude as P
+import           Control.Concurrent  hiding (yield)
+import           Control.Monad.State
+import           Prelude             (String, ($), (.), (<$>))
+import qualified Prelude             as P
+import           Streaming
+import           Streaming.Internal
 
 -- Compare the version from the slides
 --
@@ -76,7 +77,7 @@ import qualified Prelude as P
 
 -- S4. Implement
 --
--- map :: (a -> b) -> Stream (Of a) m r -> Stream (Of b) m r
+-- map :: Monad m => (a -> b) -> Stream (Of a) m r -> Stream (Of b) m r
 --
 -- (You may have to hide the Prelude version of map.)
 
