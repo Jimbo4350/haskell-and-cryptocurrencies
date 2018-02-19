@@ -1,0 +1,9 @@
+flags: {}
+nix:
+  enable: true
+  shell-file: shell.nix
+packages:
+- .
+extra-deps:
+- base58-bytestring-0.1.0
+resolver: nightly-2018-01-06
