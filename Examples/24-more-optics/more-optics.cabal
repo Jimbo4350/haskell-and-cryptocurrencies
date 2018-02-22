@@ -1,0 +1,31 @@
+name:                more-optics
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Data
+                     , Monomorphic
+                     , Monomorphic.Iso
+                     , Monomorphic.Lens
+                     , Monomorphic.Prism
+                     , Monomorphic.Traversal
+                     , NaivePrism
+                     , Polymorphic
+                     , Polymorphic.Iso
+                     , Polymorphic.Lens
+                     , Polymorphic.Prism
+                     , Polymorphic.Traversal
+  build-depends:       base >= 4.7 && < 5
+                     , bytestring
+                     , profunctors
+                     , tagged
+  default-language:    Haskell2010
+  default-extensions:  DeriveFunctor
+                     , DeriveFoldable
+                     , InstanceSigs
+                     , LambdaCase
+                     , RankNTypes
+                     , ScopedTypeVariables
+  ghc-options:         -Wall
