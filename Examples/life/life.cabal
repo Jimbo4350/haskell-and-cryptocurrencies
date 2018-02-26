@@ -1,0 +1,38 @@
+name:                life
+version:             0.1.0.0
+synopsis:            Conway's Game of Life in Haskell, using comonads
+-- description:
+homepage:            https://github.com/brunjlar/life#readme
+license:             MIT
+license-file:        LICENSE
+author:              Lars Bruenjes
+maintainer:          brunjlar@gmail.com
+copyright:           (C) 2017 by Lars Bruenjes
+category:            Game
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Life
+                     , Life.Grid
+                     , Life.Tape
+  other-modules:
+  ghc-options:         -Wall -O2 
+  build-depends:       base >= 4.7 && < 5
+                     , comonad
+                     , lens
+                     , Stream
+  default-language:    Haskell2010
+
+executable life
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -Wall -O2 
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , ansi-terminal
+                     , lens
+                     , life
+                     , random
